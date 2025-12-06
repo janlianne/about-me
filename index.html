@@ -28,17 +28,20 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <h1>Hello, I'm <span>Julianne</span></h1>
-            <p>A UI/UX Designer focused on creating modern, user-centered experiences.</p>
-        </div>
+<section id="home" class="hero">
+    <div class="hero-left">
+        <h1>Hello, I'm <span>Julianne</span></h1>
+        <p>A UI/UX Designer focused on creating modern, user-centered experiences.</p>
 
-        <div class="hero-img">
-            <div class="circle-bg"></div>
-            <img src="images/image-removebg-preview (7).png" alt="profile picture">
-        </div>
-    </section>
+        <a href="#projects" class="hero-btn">Explore Projects</a>
+    </div>
+
+    <div class="hero-right">
+        <div class="hero-circle"></div>
+        <img src="images/image-removebg-preview (7).png" alt="Profile Picture">
+    </div>
+</section>
+
 
     <!-- ABOUT SECTION -->
     <section id="about" class="about">
@@ -47,14 +50,9 @@
 
         <h2>ABOUT ME</h2>
         <p>
-            I am a creative individual with a passion for storytelling,
-            cooking, and online gaming. In my free time, I enjoy writing stories
-            that explore different ideas and experiences. I also love experimenting
-            in the kitchen and trying out new recipes. Professionally, I am a UI/UX
-            designer in our capstone group, where I focus on creating intuitive
-            and engaging digital experiences. I enjoy blending creativity with
-            functionality to make designs that not only look good but also feel
-            seamless to use.
+         I am a creative individual who enjoys writing stories, cooking, and playing online games during 
+         my vacant time. 
+         I often explore various ideas and perspectives through the stories I write. I am a UI/UX designer in our capstone group, where I focus on creating intuitive and engaging digital experiences. I enjoy blending creativity with functionality to make designs that not only look good but also feel seamless to use.
         </p>
     </section>
 
@@ -85,7 +83,7 @@
             <div class="skill-card">
                 <div class="skill-number">2</div>
                 <h3>Mobile App UI</h3>
-                <p>A clean, intuitive mobile banking app focused on clarity and flow.</p>
+                <p>A clean, intuitive mobile app focused on clarity and flow.</p>
                 <img src="images/c050e411-8e2a-46a4-87cf-72598d81b048.jpg" alt="Web Dev Sample" />
             </div>
 
@@ -183,48 +181,81 @@ body {
 
 /* HERO SECTION */
 .hero {
-    text-align: center;
-    padding: 60px 20px;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 60px;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
-.hero-text h1 {
-    font-size: 2.5rem;
+/* LEFT SIDE TEXT */
+.hero-left {
+    max-width: 600px;
 }
 
-.hero-text span {
-    color: #ffe100;
+.hero-left h1 {
+    font-size: 3rem;
     font-weight: bold;
 }
 
-.hero-text p {
-    margin-top: 10px;
+.hero-left h1 span {
+    color: #ffe100;
 }
 
-.hero-img {
-    margin-top: 30px;
-    position: relative;
+.hero-left p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
-/* Yellow semicircle */
-.circle-bg {
-    width: 400px;
-    height: 200px;
+/* EXPLORE BUTTON */
+.hero-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
     background: #ffe100;
-    border-radius: 0 0 250px 250px;
-    position: absolute;
-    bottom: -60px;
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
-    z-index: 1;
+    color: #073b4c;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 2px solid transparent;
 }
 
-.hero-img img {
-    width: 240px;
-    height: 240px;
-    object-fit: cover;
+.hero-btn:hover {
+    background: transparent;
+    border-color: #ffe100;
+    color: #ffe100;
+}
+
+/* RIGHT SIDE IMAGE */
+.hero-right {
+    position: relative;
+    width: 340px;
+    height: 340px;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
     position: relative;
     z-index: 2;
+    margin-left: 30px;
+}
+
+/* FULL CIRCLE BACKGROUND */
+.hero-circle {
+    width: 340px;
+    height: 340px;
+    background: #ffe100;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    filter: drop-shadow(0 0 15px #ffe100);
 }
 
 /* ABOUT SECTION */
@@ -475,6 +506,34 @@ body {
         font-size: 24px;
     }
 }
+/* MOBILE RESPONSIVE HERO */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 20px;
+    }
+
+    .hero-left {
+        order: 2;
+    }
+
+    .hero-right {
+        order: 1;
+        width: 260px;
+        height: 260px;
+    }
+
+    .hero-circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    .hero-left h1 {
+        font-size: 2.2rem;
+    }
+}
+
 </style>
 
 <script>

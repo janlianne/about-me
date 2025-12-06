@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Julianne</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+
+        <!-- Hamburger icon -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Hello, I'm <span>Julianne</span></h1>
+            <p>A UI/UX Designer focused on creating modern, user-centered experiences.</p>
+        </div>
+
+        <div class="hero-img">
+            <div class="circle-bg"></div>
+            <img src="images/image-removebg-preview (7).png" alt="profile picture">
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="circle-left"></div>
+        <div class="circle-right"></div>
+
+        <h2>ABOUT ME</h2>
+        <p>
+            I am a creative individual with a passion for storytelling,
+            cooking, and online gaming. In my free time, I enjoy writing stories
+            that explore different ideas and experiences. I also love experimenting
+            in the kitchen and trying out new recipes. Professionally, I am a UI/UX
+            designer in our capstone group, where I focus on creating intuitive
+            and engaging digital experiences. I enjoy blending creativity with
+            functionality to make designs that not only look good but also feel
+            seamless to use.
+        </p>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills">
+        <div class="circle-left"></div>
+        <div class="circle-right"></div>
+
+        <h2>SKILLS</h2>
+        <div class="skill-boxes">
+            <div class="skill">FIGMA</div>
+            <div class="skill">UI DESIGN</div>
+            <div class="skill">PROTOTYPE</div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="skills-section">
+        <h2>PROJECTS</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <div class="skill-number">1</div>
+                <h3>UI/UX Design</h3>
+                <p>Experienced in creating intuitive and visually engaging user interfaces using modern design principles.</p>
+                <img src="images/b5f3878c-8d7e-46f7-880c-ffb7f9b2232e.jpg" alt="Sample UIUX" />
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-number">2</div>
+                <h3>Mobile App UI</h3>
+                <p>A clean, intuitive mobile banking app focused on clarity and flow.</p>
+                <img src="images/c050e411-8e2a-46a4-87cf-72598d81b048.jpg" alt="Web Dev Sample" />
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-number">3</div>
+                <h3>Landing Page</h3>
+                <p>Redesigned a modern landing page to improve clarity and visual hierarchy.</p>
+                <img src="images/27e695c4-0424-4dfa-9bc2-87dfaf18b927.jpg" alt="Branding Sample" />
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <h2>CONTACT ME</h2>
+        <div class="contact-icons">
+            <div class="contact-item">
+                <img src="images/icons8-facebook-48.png" alt="Facebook" />
+                <p>https://www.facebook.com/juliheyy4</p>
+            </div>
+
+            <div class="contact-item">
+                <img src="images/icons8-gmail-48.png" alt="Gmail" />
+                <p>hermosajulianne90@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<style>
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #073b4c;
+    color: #ffffff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #073b4c;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #ffe100;
+}
+
+/* Hamburger */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+}
+
+.hero-text span {
+    color: #ffe100;
+    font-weight: bold;
+}
+
+.hero-text p {
+    margin-top: 10px;
+}
+
+.hero-img {
+    margin-top: 30px;
+    position: relative;
+}
+
+/* Yellow semicircle */
+.circle-bg {
+    width: 400px;
+    height: 200px;
+    background: #ffe100;
+    border-radius: 0 0 250px 250px;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    z-index: 1;
+}
+
+.hero-img img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+/* ABOUT SECTION */
+.about {
+    position: relative;
+    background: white;
+    color: #333;
+    padding: 80px 40px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    text-align: center;
+}
+
+.about h2 {
+    color: #073b4c;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* SKILLS SECTION */
+.skills {
+    position: relative;
+    background: white;
+    color: #073b4c;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.skill-boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    background: #ffe100;
+    color: #073b4c;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid #073b4c;
+}
+
+.skills-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #0c4a53;
+    color: white;
+}
+
+.skills-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background-color: #25535b;
+    width: 260px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: left;
+    color: white;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+}
+
+.skill-number {
+    width: 40px;
+    height: 40px;
+    background-color: #ffc108;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+}
+
+.skill-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+    color: #0c4a53;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Contact icons */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 14px;
+    color: #333;
+}
+/* Hamburger menu icon */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none; /* hide links by default */
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background-color: #073b4c;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* show links when toggled */
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .nav-links li {
+        margin-left: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-img img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skill-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .contact-icons {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-img img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .skills h2, .skills-section h2, .contact-section h2 {
+        font-size: 24px;
+    }
+}
+</style>
+
+<script>
+// Simple scroll fade-in effect
+document.addEventListener("DOMContentLoaded", () => {
+    const skillCards = document.querySelectorAll(".skill-card");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = "translateY(0)";
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    skillCards.forEach(card => observer.observe(card));
+});
+
+</script>
+<script>
+    // Hamburger menu toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+</script>
